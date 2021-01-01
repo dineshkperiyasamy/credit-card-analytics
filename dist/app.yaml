@@ -1,6 +1,4 @@
-runtime: python27
-api_version: 1
-threadsafe: yes
+runtime: nodejs8
 
 handlers:
   - url: /
@@ -8,13 +6,3 @@ handlers:
     upload: dist/credit-card-analytics/index.html
   - url: /
     static_dir: dist/credit-card-analytics
-
-skip_files:
-  - e2e/
-  - node_modules/
-  - src/
-  - ^(.*/)?\..*$
-  - ^(.*/)?.*\.json$
-  - ^(.*/)?.*\.md$
-  - ^(.*/)?.*\.yaml$
-  - ^LICENSE
