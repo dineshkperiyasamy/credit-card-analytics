@@ -3,16 +3,54 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomerDataTableComponent } from './customer-data-table/customer-data-table.component';
+import { AppMaterialModule } from './app-material/app-material.module';
+import { HttpClientModule} from "@angular/common/http";
+import { CustomerDataService } from "./services/customer-data.service";
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
+import { ChartsModule } from 'ng2-charts';
+import { DashComponent } from './dash/dash.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MiniCardComponent } from './mini-card/mini-card.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomerDataTableComponent,
+    HomeComponent,
+    MenuComponent,
+    DashboardComponent,
+    MyBarChartComponent,
+    DashComponent,
+    MiniCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AppMaterialModule,
+    HttpClientModule,
+    LayoutModule,
+    ChartsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [
+    CustomerDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

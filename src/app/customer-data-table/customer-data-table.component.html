@@ -1,0 +1,146 @@
+
+<div class = "example-header" fxLayout="row">
+    <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filter" #input>
+      </mat-form-field>
+</div>
+  
+  <div class="example-container mat-elevation-z8">
+     <mat-table matTableExporter [dataSource]="dataSource"  #exporter="matTableExporter" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="clientId">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> CLIENT ID </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.clientId}} </mat-cell>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="clientNum">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Client Num </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.clientNum}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="attritionFlag">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Attrited </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.attritionFlag}} </mat-cell>
+      </ng-container>
+  
+      <!-- Color Column -->
+      <ng-container matColumnDef="customerAge">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Age </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.customerAge}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="gender">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Gender </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.gender}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="dependentCount">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Dependents</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.dependentCount}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="educationLevel">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Education </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.educationLevel}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="maritalStatus">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Marital Status </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.maritalStatus}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="incomeCategory">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Income Category</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.incomeCategory}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="cardCategory">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Card Category </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.cardCategory}} </mat-cell>
+      </ng-container>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="monthsOnBook">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Months on Book </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.monthsOnBook}} </mat-cell>
+        </ng-container>
+    
+        <!-- Progress Column -->
+        <ng-container matColumnDef="totalRelationshipCount">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Total Relationships</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.totalRelationshipCount}} </mat-cell>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="monthsInactive">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Months Inactive </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.monthsInactive}} </mat-cell>
+        </ng-container>
+    
+        <!-- Color Column -->
+        <ng-container matColumnDef="contactsCount">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Contacts Count </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.contactsCount}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="creditLimit">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Credit Limit </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.creditLimit}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="totalRevolvingBal">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Total Revolving Balance </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.totalRevolvingBal}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="avgOpenToBuy">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Average open to  Buy </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.avgOpenToBuy}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="amountChangeQt">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Amount Change Qt</mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.amountChangeQt}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="transAmt">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Trans Amount </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.transAmt}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="transCount">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Trans Count </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.transCount}} </mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="countChangeQt">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Count change Qt </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.countChangeQt}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="utilRatio">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Util Ratio </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.utilRatio}} </mat-cell>
+        </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  
+      <!-- Row shown when there is no matching data. -->
+      <mat-row *matNoDataRow>
+        <mat-cell colspan="4">No data matching the filter "{{input.value}}"</mat-cell>
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+  <div>
+  <button mat-raised-button (click)="exporter.exportTable('xlsx', {fileName:'test', sheet: 'sheet_name', Props: {Author: 'Talha'}})">Excel</button>
+  <button mat-raised-button (click)="exporter.exportTable('csv')">Csv</button>
+  <button mat-raised-button (click)="exporter.exportTable('json')">Json</button>
+  <button mat-raised-button (click)="exporter.exportTable('txt')">Txt</button>
+</div>
