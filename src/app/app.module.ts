@@ -11,7 +11,7 @@ import { CustomerDataService } from "./services/customer-data.service";
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
 import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { DashComponent } from './dash/dash.component';
@@ -29,7 +29,7 @@ import { MiniCardComponent } from './mini-card/mini-card.component';
     CustomerDataTableComponent,
     HomeComponent,
     MenuComponent,
-    DashboardComponent,
+    AnalyticsComponent,
     MyBarChartComponent,
     DashComponent,
     MiniCardComponent
