@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver} from '@angular/cdk/layout';
 import { CustomerDataService } from '../services/customer-data.service';
-import { Customer } from '../models/customer';
+import { IncomeCategory } from '../models/income-category';
 import { CustomerSummary } from '../models/customer-summary';
 
 
@@ -33,13 +33,18 @@ export class DashComponent implements OnInit{
 );
 
 miniCardData: CustomerSummary[];
-
+pieData: IncomeCategory[];
 constructor(private breakpointObserver: BreakpointObserver, private customerService: CustomerDataService) {}
 
 ngOnInit() {
   this.customerService.findAllCustomersSummary().subscribe({
     next: customerData => {
       this.miniCardData = customerData;
+    }
+  });
+  this.customerService.findIncomeCategory().subscribe({
+    next: incomeData => {
+      this.pieData = incomeData;
     }
   });
 }

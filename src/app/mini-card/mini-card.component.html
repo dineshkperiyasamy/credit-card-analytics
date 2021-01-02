@@ -1,11 +1,7 @@
 <mat-card class="dashboard-card">
-    <mat-card-header class="card-header">
-        <mat-card-title>
-            <h1 class="value-text">{{totalUsers}}</h1>
-        </mat-card-title>
-    </mat-card-header>
-    <h3 class="title-text">{{attrition}}</h3>
-    <p class="difference-text">
-        <span class="duration">{{age}}</span>
-    </p>
+    <mat-list dense>
+        <h3 matSubheader>Age analysis of {{attrition}}s</h3>
+        <mat-list-item> Below 35: {{totalUsers}} / Between 35 and 50: {{totalUsers1}}</mat-list-item>
+        <mat-list-item> Between 50 and 65: {{totalUsers2}} / 65 and above: {{totalUsers3}}</mat-list-item>
+       </mat-list>
 </mat-card>

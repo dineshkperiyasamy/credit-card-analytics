@@ -4,8 +4,16 @@
     <!--Mini Cards-->
     <mat-grid-tile *ngFor="let mc of miniCardData" [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
-      <app-mini-card [attrition]="mc.attrition" [totalUsers]="mc.totalUsers" [age]="mc.age"></app-mini-card>
+      <app-mini-card [attrition]="mc.attrition" [totalUsers]="mc.totalUsers" [totalUsers1]="mc.totalUsers1" [totalUsers2]="mc.totalUsers2" [totalUsers3]="mc.totalUsers3"></app-mini-card>
     </mat-grid-tile>
+    <mat-grid-tile *ngFor="let pc of pieData" [colspan]="( cardLayout | async )?.chart.cols"
+    [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Income Category">
+        <app-pie-chart [type]="pc.type" [ic1]="pc.ic1" [ic2]="pc.ic2" [ic3]="pc.ic3" [ic4]="pc.ic4" [ic5]="pc.ic5" [ic6]="pc.ic6"></app-pie-chart>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
     <!--Charts-->
     <!-- <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
       <app-card title="Monthly Revenue">
@@ -17,11 +25,7 @@
         <app-product-sales-chart></app-product-sales-chart>
       </app-card>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Sales by Traffic Source">
-        <app-sales-traffic-chart></app-sales-traffic-chart>
-      </app-card>
-    </mat-grid-tile>
+    
     <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
       <app-card title="Online Store Sessions by Traffic Source">
         <app-store-sessions-chart></app-store-sessions-chart>
@@ -33,5 +37,4 @@
         <app-orders-table></app-orders-table>
       </app-card>
     </mat-grid-tile> -->
-  </mat-grid-list>
-</div>
+ 

@@ -21,6 +21,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MiniCardComponent } from './mini-card/mini-card.component';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { MiniCardComponent } from './mini-card/mini-card.component';
     AnalyticsComponent,
     MyBarChartComponent,
     DashComponent,
-    MiniCardComponent
+    MiniCardComponent,
+    PieChartComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
