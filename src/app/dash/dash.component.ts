@@ -17,7 +17,7 @@ export class DashComponent implements OnInit{
       if (matches) {
         return {
         columns: 1,
-        miniCard: { cols: 1, rows: 1 },
+        miniCard: { cols: 1, rows: 2 },
         chart: { cols: 1, rows: 2 },
         table: { cols: 1, rows: 4 },
       };
