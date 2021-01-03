@@ -126,7 +126,7 @@ class MenuComponent {
                 label: 'About',
                 icon: 'help',
                 action: '/about',
-                showOnMobile: true,
+                showOnMobile: false,
                 showOnTablet: true,
                 showOnDesktop: true
             },
@@ -134,7 +134,7 @@ class MenuComponent {
                 label: 'Anaytics',
                 icon: 'graphic_eq',
                 action: '/analytics',
-                showOnMobile: true,
+                showOnMobile: false,
                 showOnTablet: true,
                 showOnDesktop: true
             },

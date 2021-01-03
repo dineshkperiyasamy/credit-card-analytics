@@ -8,7 +8,9 @@ import { Component, Input } from '@angular/core';
 export class MiniCardComponent {
   @Input() attrition: string;
   @Input() totalUsers: number;
-  @Input() age: string;
+  @Input() totalUsers1: number;
+  @Input() totalUsers2: number;
+  @Input() totalUsers3: number;
 
   constructor() { }
 }

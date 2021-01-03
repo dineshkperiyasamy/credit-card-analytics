@@ -3,7 +3,7 @@ api_version: 1
 threadsafe: true
 
 handlers:
-  - url: /(.*)
+  - url: /
     static_files: dist/credit-card-analytics/index.html
     upload: dist/credit-card-analytics/index.html
   - url: /

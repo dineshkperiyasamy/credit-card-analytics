@@ -7,7 +7,8 @@ import { NgxLoggerLevel } from 'ngx-logger';
 export const environment = {
   production: false,
   logLevel: NgxLoggerLevel.TRACE,
-  serverLogLevel: NgxLoggerLevel.OFF
+  serverLogLevel: NgxLoggerLevel.OFF,
+  API_URL: 'https://analytics-300520.uc.r.appspot.com/api/customers'
 };
 
 /*

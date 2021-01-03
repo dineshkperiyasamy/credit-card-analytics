@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver} from '@angular/cdk/layout';
 import { CustomerDataService } from '../services/customer-data.service';
-import { Customer } from '../models/customer';
+import { IncomeCategory } from '../models/income-category';
 import { CustomerSummary } from '../models/customer-summary';
 
 
@@ -17,7 +17,7 @@ export class DashComponent implements OnInit{
       if (matches) {
         return {
         columns: 1,
-        miniCard: { cols: 1, rows: 1 },
+        miniCard: { cols: 1, rows: 2 },
         chart: { cols: 1, rows: 2 },
         table: { cols: 1, rows: 4 },
       };
@@ -25,21 +25,26 @@ export class DashComponent implements OnInit{
 
    return {
       columns: 4,
-      miniCard: { cols: 1, rows: 1 },
-      chart: { cols: 2, rows: 2 },
+      miniCard: { cols: 2, rows: 2 },
+      chart: { cols: 2, rows: 3 },
       table: { cols: 4, rows: 4 },
     };
   })
 );
 
 miniCardData: CustomerSummary[];
-
+pieData: IncomeCategory[];
 constructor(private breakpointObserver: BreakpointObserver, private customerService: CustomerDataService) {}
 
 ngOnInit() {
   this.customerService.findAllCustomersSummary().subscribe({
     next: customerData => {
       this.miniCardData = customerData;
+    }
+  });
+  this.customerService.findIncomeCategory().subscribe({
+    next: incomeData => {
+      this.pieData = incomeData;
     }
   });
 }
