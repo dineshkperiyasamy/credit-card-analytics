@@ -1,0 +1,80 @@
+<div class = "example-header" fxLayout="row">
+  <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Filter" #input>
+    </mat-form-field>
+</div>
+
+<div class="small-table mat-elevation-z8">
+   <mat-table class="full-width-table" matTableExporter [dataSource]="dataSource"  #exporter="matTableExporter" matSort>
+
+    <ng-container matColumnDef="clientId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> CLIENT ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.clientId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="clientNum">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Client Num</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.clientNum}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="creditLimit">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>creditLimit</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.creditLimit}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="totalRevolvingBal">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>totalRevolvingBal</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.totalRevolvingBal}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="avgOpenToBuy">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>avgOpenToBuy</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.avgOpenToBuy}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amountChangeQt">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>amountChangeQt</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.amountChangeQt}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="transAmt">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>transAmt</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.transAmt}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="transCount">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>transCount</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.transCount}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="countChangeQt">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>countChangeQt</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.countChangeQt}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="utilRatio">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>utilRatio</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.utilRatio}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="attritionFlag">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>attritionFlag</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <mat-chip-list>
+          <mat-chip color="{{ row.attritionFlag == 'Existing Customer' ? 'primary' : ( row.attritionFlag == 'Attrited Customer' ? 'accent' : 'warn' ) }}" selected>
+            {{row.attritionFlag}}
+          </mat-chip>
+        </mat-chip-list>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+]    <mat-row *matNoDataRow>
+      <mat-cell colspan="4">No data matching the filter "{{input.value}}"</mat-cell>
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

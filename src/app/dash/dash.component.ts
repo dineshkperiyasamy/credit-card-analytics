@@ -25,8 +25,8 @@ export class DashComponent implements OnInit{
 
    return {
       columns: 4,
-      miniCard: { cols: 1, rows: 1 },
-      chart: { cols: 2, rows: 2 },
+      miniCard: { cols: 2, rows: 2 },
+      chart: { cols: 2, rows: 3 },
       table: { cols: 4, rows: 4 },
     };
   })

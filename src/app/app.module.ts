@@ -11,8 +11,6 @@ import { CustomerDataService } from "./services/customer-data.service";
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { AnalyticsComponent } from './analytics/analytics.component';
-import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { DashComponent } from './dash/dash.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -23,7 +21,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MiniCardComponent } from './mini-card/mini-card.component';
 import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 import { CardComponent } from './card/card.component';
-
+import { TransactionsTableComponent } from './transactions-table/transactions-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { RelationshipChartComponent } from './charts/relationship-chart/relationship-chart.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,12 @@ import { CardComponent } from './card/card.component';
     CustomerDataTableComponent,
     HomeComponent,
     MenuComponent,
-    AnalyticsComponent,
-    MyBarChartComponent,
     DashComponent,
     MiniCardComponent,
     PieChartComponent,
-    CardComponent
+    CardComponent,
+    TransactionsTableComponent,
+    RelationshipChartComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,10 @@ import { CardComponent } from './card/card.component';
     MatCardModule,
     MatMenuModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     CustomerDataService

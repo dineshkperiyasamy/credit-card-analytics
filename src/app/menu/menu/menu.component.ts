@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
     {
       label: 'Sign In/Up',
       icon: 'login',
-      action: '/login',
+      action: '/dashboard',
       showOnMobile: true,
       showOnTablet: true,
       showOnDesktop: true
@@ -39,20 +39,12 @@ export class MenuComponent implements OnInit {
       showOnDesktop: true
     },
     {
-      label: 'Anaytics',
-      icon: 'graphic_eq',
-      action: '/analytics',
-      showOnMobile: false,
-      showOnTablet: true,
-      showOnDesktop: true
-    },
-    {
       label: 'Raw Data',
       icon: 'notes',
       action: '/data',
       showOnMobile: false,
-      showOnTablet: true,
-      showOnDesktop: true
+      showOnTablet: false,
+      showOnDesktop: false
     },
   ];
 }

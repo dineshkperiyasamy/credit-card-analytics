@@ -1,7 +1,6 @@
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
   <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
-    <!--Mini Cards-->
     <mat-grid-tile *ngFor="let mc of miniCardData" [colspan]="( cardLayout | async )?.miniCard.cols"
       [rowspan]="( cardLayout | async )?.miniCard.rows">
       <app-mini-card [attrition]="mc.attrition" [totalUsers]="mc.totalUsers" [totalUsers1]="mc.totalUsers1" [totalUsers2]="mc.totalUsers2" [totalUsers3]="mc.totalUsers3"></app-mini-card>
@@ -12,29 +11,16 @@
         <app-pie-chart [type]="pc.type" [ic1]="pc.ic1" [ic2]="pc.ic2" [ic3]="pc.ic3" [ic4]="pc.ic4" [ic5]="pc.ic5" [ic6]="pc.ic6"></app-pie-chart>
       </app-card>
     </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
+      <app-card title="Latest Orders">
+        <app-transactions-table></app-transactions-table>
+      </app-card>
+    </mat-grid-tile>
+    <!-- <mat-grid-tile  *ngFor="let pc of pieData" [colspan]="( cardLayout | async )?.chart.cols"
+    [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Monthly Revenue">
+        <app-relationship-chart [type]="pc.type" [ic1]="pc.ic1" [ic2]="pc.ic2" [ic3]="pc.ic3" [ic4]="pc.ic4" [ic5]="pc.ic5" [ic6]="pc.ic6"></app-relationship-chart>
+      </app-card>
+    </mat-grid-tile> -->
   </mat-grid-list>
 </div>
-    <!--Charts-->
-    <!-- <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Monthly Revenue">
-        <app-annual-sale-chart></app-annual-sale-chart>
-      </app-card>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Product Sales">
-        <app-product-sales-chart></app-product-sales-chart>
-      </app-card>
-    </mat-grid-tile>
-    
-    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Online Store Sessions by Traffic Source">
-        <app-store-sessions-chart></app-store-sessions-chart>
-      </app-card>
-    </mat-grid-tile> -->
-    <!--Table-->
-    <!-- <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
-      <app-card title="Latest Orders">
-        <app-orders-table></app-orders-table>
-      </app-card>
-    </mat-grid-tile> -->
- 
