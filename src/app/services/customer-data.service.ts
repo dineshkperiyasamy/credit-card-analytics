@@ -11,7 +11,7 @@ export class CustomerDataService {
   public responseCache:Observable<Customer[]>;
   public summaryCache:Observable<CustomerSummary[]>;
   public incomeCache:Observable<IncomeCategory[]>;
-  private readonly URL = 'http://localhost:8080/api/customers';
+  private readonly URL = 'https://analytics-300520.uc.r.appspot.com/api/customers';
 
   constructor(private http:HttpClient) {
   }
