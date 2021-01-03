@@ -5,8 +5,8 @@
     </mat-form-field>
 </div>
 
-<div class="small-table mat-elevation-z8">
-   <mat-table class="full-width-table" matTableExporter [dataSource]="dataSource"  #exporter="matTableExporter" matSort>
+<div class="example-container mat-elevation-z8">
+   <mat-table matTableExporter [dataSource]="dataSource"  #exporter="matTableExporter" matSort>
 
     <ng-container matColumnDef="clientId">
       <mat-header-cell *matHeaderCellDef mat-sort-header> CLIENT ID </mat-header-cell>
