@@ -8,7 +8,7 @@ export const environment = {
   production: false,
   logLevel: NgxLoggerLevel.TRACE,
   serverLogLevel: NgxLoggerLevel.OFF,
-  API_URL: 'http://localhost:8080/api/customers'
+  API_URL: 'https://analytics-300520.uc.r.appspot.com/api/customers'
 };
 
 /*

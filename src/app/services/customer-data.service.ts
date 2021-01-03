@@ -19,7 +19,7 @@ export class CustomerDataService {
   public currentAges:Observable<Ages[]>;
   public attritedAges:Observable<Ages[]>;
 
-  private readonly URL = environment.API_URL;
+  URL = environment.API_URL;
 
   constructor(private http:HttpClient) {
   }
