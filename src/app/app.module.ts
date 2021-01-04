@@ -9,7 +9,6 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { HttpClientModule} from "@angular/common/http";
 import { CustomerDataService } from "./services/customer-data.service";
 import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ChartsModule } from 'ng2-charts';
 import { DashComponent } from './dash/dash.component';
@@ -25,7 +24,6 @@ import { TransactionsTableComponent } from './transactions-table/transactions-ta
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { RelationshipChartComponent } from './charts/relationship-chart/relationship-chart.component';
 import { AboutUsComponent } from './about/about-us/about-us.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
@@ -35,13 +33,11 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     CustomerDataTableComponent,
     HomeComponent,
-    MenuComponent,
     DashComponent,
     MiniCardComponent,
     PieChartComponent,
     CardComponent,
     TransactionsTableComponent,
-    RelationshipChartComponent,
     AboutUsComponent,
     LoginComponent
   ],
