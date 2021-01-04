@@ -4,14 +4,6 @@
       <button mat-button routerLink="/"><mat-icon>home</mat-icon></button>
     </span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <button mat-button routerLink="/login" *ngIf="!isAuthenticated">
-      <mat-icon>login</mat-icon>
-      Login
-    </button>
-    <button mat-button *ngIf="isAuthenticated" (click)="logout()">
-      <mat-icon>exit_to_app</mat-icon>
-      Logout
-    </button>
     <button mat-button routerLink="/dashboard">
       <mat-icon>insert_chart</mat-icon>
       Dashboard
@@ -24,6 +16,14 @@
         <mat-icon>notes</mat-icon>
         Data table
       </button>
+    <button mat-button routerLink="/login" *ngIf="!isAuthenticated">
+        <mat-icon>login</mat-icon>
+        Login
+    </button>
+    <button mat-button *ngIf="isAuthenticated" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        Logout
+    </button>
   </div>
   <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
     <mat-icon>menu</mat-icon>
