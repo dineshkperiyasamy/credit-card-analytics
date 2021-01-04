@@ -32,8 +32,8 @@ export class MenuComponent implements OnInit {
     },
     {
       label: 'Contact Us',
-      icon: 'contact_support',
-      action: '/about',
+      icon: 'help',
+      action: '/contact',
       showOnMobile: false,
       showOnTablet: true,
       showOnDesktop: true

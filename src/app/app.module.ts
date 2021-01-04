@@ -28,6 +28,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { RelationshipChartComponent } from './charts/relationship-chart/relationship-chart.component';
 import { AboutUsComponent } from './about/about-us/about-us.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     TransactionsTableComponent,
     RelationshipChartComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
