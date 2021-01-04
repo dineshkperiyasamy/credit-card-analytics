@@ -31,9 +31,9 @@ export class MenuComponent implements OnInit {
       showOnDesktop: true
     },
     {
-      label: 'About',
+      label: 'Contact Us',
       icon: 'help',
-      action: '/about',
+      action: '/contact',
       showOnMobile: false,
       showOnTablet: true,
       showOnDesktop: true

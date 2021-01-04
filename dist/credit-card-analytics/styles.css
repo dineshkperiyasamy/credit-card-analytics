@@ -9,6 +9,51 @@
   font-size: 8pt;
   float: right;
   margin: 8px;
+}html, body {
+  height: 100%;
+}body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}.chart-cnt canvas {
+  max-height: 450px;
+  width: auto !important;
+}.chart-cnt {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+  margin-bottom: 10px;
+  overflow: scroll;
+}.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}.table-responsive .mat-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  display: table;
+  border-collapse: collapse;
+  margin: 0px;
+}.table-responsive .mat-row,
+.table-responsive .mat-header-row {
+  display: table-row;
+}.table-responsive .mat-cell,
+.table-responsive .mat-header-cell {
+  word-wrap: initial;
+  display: table-cell;
+  padding: 0px 5px;
+  line-break: unset;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=styles.css.map*/

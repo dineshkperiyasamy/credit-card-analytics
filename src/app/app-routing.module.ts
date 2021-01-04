@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import {CustomerDataTableComponent} from "./customer-data-table/customer-data-table.component";
 import { DashComponent } from './dash/dash.component';
 import {HomeComponent} from "./home/home.component";
+import { AboutUsComponent } from "./about/about-us/about-us.component";
+import { LoginComponent } from "./login/login.component";
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -11,16 +14,27 @@ const routes: Routes = [
   },
   {
     path: "home",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [ AuthGuardService ]
   },
   {
     path: "data",
-    component: CustomerDataTableComponent
+    component: CustomerDataTableComponent,
+    canActivate: [ AuthGuardService ]
   },
   {
     path: "dashboard",
-    component: DashComponent
-  }
+    component: DashComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: "contact",
+    component: AboutUsComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
 ];
 
 @NgModule({

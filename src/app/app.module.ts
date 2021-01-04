@@ -26,6 +26,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { RelationshipChartComponent } from './charts/relationship-chart/relationship-chart.component';
+import { AboutUsComponent } from './about/about-us/about-us.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { RelationshipChartComponent } from './charts/relationship-chart/relation
     PieChartComponent,
     CardComponent,
     TransactionsTableComponent,
-    RelationshipChartComponent
+    RelationshipChartComponent,
+    AboutUsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ import { RelationshipChartComponent } from './charts/relationship-chart/relation
     MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ReactiveFormsModule
   ],
   providers: [
     CustomerDataService
