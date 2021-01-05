@@ -47,10 +47,10 @@ export class CustomerDataService {
     }
     return this.tablesCache;
   } 
-  findAttritedAgesByType(): Observable<Ages[]>{
-    return this.http.get<Ages[]>(this.URL+'ages',{params:{type: 'Attrited Cusomter'}});
-  }
-  findCurrentAgesByType(): Observable<Ages[]>{
-    return this.http.get<Ages[]>(this.URL+'ages',{params:{type: 'Exisitng Cusomter'}});
-  }
+  // findAttritedAgesByType(): Observable<Ages[]>{
+  //   return this.http.get<Ages[]>(this.URL+'ages',{params:{type: 'Attrited Cusomter'}});
+  // }
+  // findCurrentAgesByType(): Observable<Ages[]>{
+  //   return this.http.get<Ages[]>(this.URL+'ages',{params:{type: 'Exisitng Cusomter'}});
+  // }
 }

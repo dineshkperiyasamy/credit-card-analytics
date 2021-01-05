@@ -29,31 +29,30 @@ export class AboutUsComponent implements OnInit {
 	}
 	onSubmit() {
 		if (this.form.status == "VALID" && this.honeypot.value == "") {
-			this.form.disable(); // disable the form if it's valid to disable multiple submissions
+			this.form.disable();
 			var formData: any = new FormData();
 			formData.append("name", this.form.get("name").value);
 			formData.append("email", this.form.get("email").value);
 			formData.append("message", this.form.get("message").value);
-			this.isLoading = true; // sending the post request async so it's in progress
-			this.submitted = false; // hide the response message on multiple submits
+			this.isLoading = true; 
+			this.submitted = false; 
 			this.http.post("https://script.google.com/macros/s/AKfycbyU_CamaZ__g_v3s4uvykF4aNAUEAeDOtcB54CfMg/exec", formData).subscribe(
 				(response) => {
-					// choose the response message
 					if (response["result"] == "success") {
 						this.responseMessage = "Thanks for the message! I'll get back to you soon!";
 					} else {
 						this.responseMessage = "Oops! Something went wrong... Reload the page and try again.";
 					}
-					this.form.enable(); // re enable the form after a success
-					this.submitted = true; // show the response message
-					this.isLoading = false; // re enable the submit button
+					this.form.enable();
+					this.submitted = true; 
+					this.isLoading = false; 
 					console.log(response);
 				},
 				(error) => {
 					this.responseMessage = "Oops! An error occurred... Reload the page and try again.";
-					this.form.enable(); // re enable the form after a success
-					this.submitted = true; // show the response message
-					this.isLoading = false; // re enable the submit button
+					this.form.enable(); 
+					this.submitted = true;
+					this.isLoading = false;
 					console.log(error);
 				}
 			);
